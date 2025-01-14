@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Public for everyone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+</head>
+
+<body>
+    <div class="container flex bg-black">
+        <div class="left">
+            <div class="home bg-grey rounded m-1 p-1">
+                <img class="close invert" src="Icons/close.svg" alt="">
+                <div class="heading-1 flex items-center p-1 c-p">
+                    <img class="spotify invert" src="Icons/logo.svg" alt="">
+                    <h2>Spotify</h2>
+                </div>
+                <ul class="home-btns">
+                    <li class="flex items-center p-1 c-p"><img class="invert" src="Icons/home.svg" alt="home">Home</li>
+                    <li class="flex items-center p-1 c-p"><img class="invert" src="Icons/search.svg" alt="search">Search
+                    </li>
+                </ul>
+            </div>
+            <div class="library bg-grey rounded m-1 p-1">
+                <div class="heading-2 flex items-center p-1">
+                    <img class="invert" src="Icons/playlist.svg" alt="">
+                    <h4>Your Library</h4>
+                </div>
+
+                <div class="song-list">
+                    <ul>
+                    </ul>
+                </div>
+
+                <div class="footer">
+                    <div class="Fst flex">
+                        <div><a href="https://www.spotify.com/in-en/legal/">Legal</a></div>
+                        <div><a href="https://www.spotify.com/in-en/safetyandprivacy/">Safety &amp; Privacy Center</a>
+                        </div>
+                        <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/">Privacy Policy</a></div>
+                    </div>
+                    <din class="Snd flex">
+                        <div><a href="https://www.spotify.com/in-en/legal/cookies-policy/">Cookies</a></div>
+                        <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3">About Ads</a></div>
+                        <div><a href="https://www.spotify.com/in-en/accessibility/">Accessibility</a></div>
+                    </din>
+                </div>
+
+            </div>
+        </div>
+        <div class="right bg-grey rounded">
+            <div class="header flex justify-between rounded p-1">
+                <div class="nav">
+                    <img class="menu invert" src="Icons/menu.svg" alt="">
+                    <img class="invert" src="Icons/leftArrow.svg" alt="">
+                    <img class="invert" src="Icons/rightArrow.svg" alt="">
+                </div>
+                <div class="buttons flex">
+                    <button class="sign-in">Sign up</button>
+                    <button class="log-in">Log in</button>
+                </div>
+            </div>
+            <div class="playlist">
+                <div class="p-1 f-23">Spotify Playlists</div>
+                <div class="cardContainer p-1">
+
+                </div>
+
+            </div>
+            <div class="play-bar rounded">
+                <div class="seek-bar flex justify-center">
+                    <div class="underline">
+                        <div class="circle">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="above-bar flex items-center justify-between">
+                    <div class="song-info">
+                    </div>
+                    <div class="play-buttons rounded">
+                        <img id="prev" class="invert" src="Icons/prevsong.svg" alt="">
+                        <img id="play" class="invert" src="Icons/play.svg" alt="">
+                        <img id="next" class="invert" src="Icons/nextsong.svg" alt="">
+                    </div>
+
+                    <div class="time-vol">
+                        <div class="song-duration">
+                        </div>
+                        <div class="volume flex justify-center">
+                            <img id="vol_icon" class="invert" src="Icons/volume.svg" alt="">
+                            <input class="vol invert" type="range" name="valume">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
