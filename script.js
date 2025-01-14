@@ -89,7 +89,7 @@ async function dynamicCardCreation() {
                                 </path>
                             </svg>
                         </button>
-                        <img class="rounded" src="./songs/${folder}/cover.jpeg" alt="">
+                        <img class="rounded" src="songs/${folder}/cover.jpeg" alt="">
                         <h3 class="pt-1">${response.info}</h3>
                         <p class="pt-1">${response.description}</p>
                     </div>`;
