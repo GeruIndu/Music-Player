@@ -40,7 +40,7 @@ async function getSong(folder) {
         ul.innerHTML += `<li class="rounded c-p">
                             <img class="invert" src="Icons/music.svg" alt="">
                             <div class="info">
-                                <div class="song-name">${ele.split(`/songs/${currentFolder}/`)[1]}</div>
+                                <div class="song-name">${ele.split(`./songs/${currentFolder}/`)[1]}</div>
                                 <div>Indra</div>
                             </div>
                             <span class="c-p">Play now</span>
