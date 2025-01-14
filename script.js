@@ -40,7 +40,7 @@ async function getSong(folder) {
         ul.innerHTML += `<li class="rounded c-p">
                             <img class="invert" src="Icons/music.svg" alt="">
                             <div class="info">
-                                <div class="song-name">${ele.split(`./songs/${currentFolder}/`)[1]}</div>
+                                <div class="song-name">${ele.split(`/songs/${currentFolder}/`)[1]}</div>
                                 <div>Indra</div>
                             </div>
                             <span class="c-p">Play now</span>
@@ -89,7 +89,7 @@ async function dynamicCardCreation() {
                                 </path>
                             </svg>
                         </button>
-                        <img class="rounded" src="/songs/${folder}/cover.jpeg" alt="">
+                        <img class="rounded" src="./songs/${folder}/cover.jpeg" alt="">
                         <h3 class="pt-1">${response.info}</h3>
                         <p class="pt-1">${response.description}</p>
                     </div>`;
