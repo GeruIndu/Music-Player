@@ -17,7 +17,7 @@ function formatSecondsToMinutes(seconds) {
 }
 
 async function getSong(folder) {
-    let a = await fetch(`http://127.0.0.1:5500/songs/${folder}/`);
+    let a = await fetch(`/songs/${folder}/`);
     currentFolder = folder;
     let response = await a.text();
 
@@ -68,7 +68,7 @@ function playSong(track) {
 // Dynamically create card according to folder
 async function dynamicCardCreation() {
     let cardContainer = document.querySelector('.cardContainer')
-    let a = await fetch(`http://127.0.0.1:5500/songs/`);
+    let a = await fetch(`/songs/`);
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
@@ -78,7 +78,7 @@ async function dynamicCardCreation() {
         const e = array[i];
         if (e.href.includes("/songs/")) {
             let folder = e.href.split('/songs/')[1];
-            let a = await fetch(`http://127.0.0.1:5500/songs/${folder}/info.json`);
+            let a = await fetch(`/songs/${folder}/info.json`);
             let response = await a.json();
             cardContainer.innerHTML += `<div data-folder="${folder}" class="card p-1 rounded">
                         <button class="play-btn">
