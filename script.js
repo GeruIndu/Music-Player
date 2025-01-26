@@ -17,7 +17,7 @@ function formatSecondsToMinutes(seconds) {
 }
 
 async function getSong(folder) {
-    let a = await fetch(`/songs/${folder}/`);
+    let a = await fetch(`./songs/${folder}/`);
     currentFolder = folder;
     let response = await a.text();
 
@@ -58,7 +58,7 @@ async function getSong(folder) {
 
 
 function playSong(track) {
-    currentSong.src = `/songs/${currentFolder}/` + track;
+    currentSong.src = `./songs/${currentFolder}/` + track;
     currentSong.play();
     play.src = "Icons/pause.svg";
     document.querySelector(".song-info").innerHTML = track;
@@ -156,7 +156,7 @@ async function dynamicCardCreation() {
     prev.addEventListener('click', () => {
         let index = songs.indexOf(currentSong.src);
         if (index >= 1) {
-            playSong(songs[index - 1].split(`/songs/${currentFolder}/`)[1]);
+            playSong(songs[index - 1].split(`./songs/${currentFolder}/`)[1]);
         }
     })
 
@@ -164,7 +164,7 @@ async function dynamicCardCreation() {
     next.addEventListener('click', () => {
         let index = songs.indexOf(currentSong.src);
         if (index < songs.length) {
-            playSong(songs[index + 1].split(`/songs/${currentFolder}/`)[1]);
+            playSong(songs[index + 1].split(`./songs/${currentFolder}/`)[1]);
         }
     })
 
